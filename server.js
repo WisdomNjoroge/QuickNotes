@@ -1,6 +1,6 @@
 import express from 'express';
 import sequelize from './config/database.js';
-import noteRoutes from './routes/noteRoutes.js';
+import router from './routes/noteRoutes.js';
 
 
 const app = express();
@@ -13,6 +13,7 @@ injectMiddlewares(app);
 
 // Routes
 app.use('/api/auth', authRoutes);
+app.use('/api/notes', noteRoutes);
 
 injectRoutes(server);
 startServer(server);
