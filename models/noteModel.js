@@ -19,3 +19,5 @@ const Note = sequelize.define('Note', {
         defaultValue: DataTypes.NOW,
     },
 });
+
+export default Note;
