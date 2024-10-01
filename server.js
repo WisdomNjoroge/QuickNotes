@@ -9,10 +9,13 @@ const app = express();
 // Middleware
 app.use(express.json());
 
+injectMiddlewares(app);
 
 // Routes
-app.use('/api/notes', noteRoutes);
+app.use('/api/auth', authRoutes);
 
+injectRoutes(server);
+startServer(server);
 
 
 // Server
