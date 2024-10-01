@@ -38,7 +38,7 @@ export const getNoteById = async (req, res) => {
 };
 
 // Updating a note
-export const updateNote = asyc (req, res) => {
+export const updateNote = async (req, res) => {
     try {
         const note = await Note.findByPl(req.params.id);
         if (note) {
