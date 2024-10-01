@@ -9,7 +9,7 @@ export const createNote = async (req, res) => {
     } catch (error) {
         res.status(500).json({ message: error.message });
     }
-}
+};
 
 
 // Getting all notes
@@ -20,7 +20,7 @@ export const getNotes = async (req, res) => {
     } catch (error) {
         res.status(500).json({ message: error.message });
     }
-}
+};
 
 // Getting a note by ID
 export const getNoteById = async (req, res) => {
@@ -35,7 +35,7 @@ export const getNoteById = async (req, res) => {
     } catch (error) {
         res.status(500).json({ message: error.message });
     }
-}
+};
 
 // Updating a note
 export const updateNote = asyc (req, res) => {
@@ -52,7 +52,7 @@ export const updateNote = asyc (req, res) => {
         res.status(500).json({ message: error.message });
     }
 
-}
+};
 
 // Deleting a note
 export const deleteote = async (req, res) => {
@@ -66,4 +66,4 @@ export const deleteote = async (req, res) => {
     } catch (error) {
         res.status(500).json({ message: error.message });
     }
-}
+};
