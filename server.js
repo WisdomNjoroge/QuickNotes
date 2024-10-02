@@ -1,6 +1,7 @@
 import express from 'express';
 import sequelize from './config/database.js';
 import authRoutes from './routes/authRoutes.js';
+import noteRoutes from './routes/noteRoutes.js';
 
 
 const app = express();
