@@ -40,7 +40,7 @@ export const getNoteById = async (req, res) => {
 // Updating a note
 export const updateNote = async (req, res) => {
     try {
-        const note = await Note.findByPl(req.params.id);
+        const note = await Note.findByPk(req.params.id);
         if (note) {
             await note.update(req.body);
             res.status(200).json(note);
@@ -57,7 +57,7 @@ export const updateNote = async (req, res) => {
 // Deleting a note
 export const deleteNote = async (req, res) => {
     try {
-        const note = await Note.fingByPl(req.params.id);
+        const note = await Note.findByPk(req.params.id);
         if (note) {
             await note.destroy();
             res.status(204).send();
