@@ -21,7 +21,8 @@ export const signup = async (req, res) => {
         const newUser = await User.create({ username, email, password: hashedPassword });
         res.status(201).json({ message: 'User created successfully', user: newUser });
     } catch (error) {
-        res.status(500).json({ message: 'Server error', error });
+        res.status(500).json({ message: "Server ERROR", error: error.message });
+
     }
 };
 
@@ -52,6 +53,7 @@ export const login = async (req, res) => {
         const token = jwt.sign({ id: user.id, username: user.username }, 'my_jwt_secret', { expiresIn: '1h1' });
         res.status(200).json({ token });
     } catch (error) {
-        res.status(500).json({ message: 'Server ERROR', error });
+        res.status(500).json({ message: "Server ERROR", error: error.message });
+
     }
 };
