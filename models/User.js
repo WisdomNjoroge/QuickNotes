@@ -14,7 +14,7 @@ const User = sequelize.define('User', {
         unique: true
     },
     password: {
-        type: DataTypes.STTRING,
+        type: DataTypes.STRING,
         allowNull: false
     }
 });
