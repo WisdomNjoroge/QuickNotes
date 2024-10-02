@@ -55,7 +55,7 @@ export const updateNote = async (req, res) => {
 };
 
 // Deleting a note
-export const deleteote = async (req, res) => {
+export const deleteNote = async (req, res) => {
     try {
         const note = await Note.fingByPl(req.params.id);
         if (note) {
