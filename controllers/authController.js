@@ -39,7 +39,7 @@ export const login = async (req, res) => {
     try {
         // Finding the User
         const user = await User.findOne({ where: { email } });
-        if (!User) {
+        if (!user) {
             return res.status(401).json({ message: 'Invalid credentials!!' });
         }
 
