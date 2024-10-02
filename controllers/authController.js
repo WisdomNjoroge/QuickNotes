@@ -22,7 +22,7 @@ export const signup = async (req, res) => {
         res.status(201).json({ message: 'User created successfully', user: newUser });
     } catch (error) {
         res.status(500).json({ message: "Server ERROR", error: error.message });
-
+        console.error(error.stack);
     }
 };
 
@@ -54,6 +54,7 @@ export const login = async (req, res) => {
         res.status(200).json({ token });
     } catch (error) {
         res.status(500).json({ message: "Server ERROR", error: error.message });
+        console.error(error.stack);
 
     }
 };
